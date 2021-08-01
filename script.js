@@ -192,6 +192,7 @@ function showNotes(){
     let noteElm = document.getElementById("notes");
     if (notesObj.length != 0){
         noteElm.innerHTML = html;
+        document.getElementById("search").disabled = false;
     }else{
         noteElm.innerHTML = emptymessage;
         document.getElementById("search").disabled = true;
