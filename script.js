@@ -76,8 +76,6 @@ searchBar.addEventListener('keyup', async (event) => {
     let noteElm = document.getElementById("notes");
     if (notesObj.length != 0 && filterCount != 0){
         noteElm.innerHTML = html;
-    }else{
-        searchBar.disabled = true;
     }
     if(searchBar.value != ""){
         if (filterCount == 0){
