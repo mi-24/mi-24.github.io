@@ -74,12 +74,19 @@ searchBar.addEventListener('keyup', async (event) => {
         }        
     });
     let noteElm = document.getElementById("notes");
-    if (notesObj.length != 0){
+    if (notesObj.length != 0 && filterCount != 0){
         noteElm.innerHTML = html;
+    }else{
+        searchBar.disabled = true;
     }
-    if (filterCount == 0){
-        noteElm.innerHTML = emptymessage;
+    if(searchBar.value != ""){
+        if (filterCount == 0){
+            noteElm.innerHTML = emptymessage;
+        }
+    }else{
+        showNotes()
     }
+    
     
 })
 
@@ -189,6 +196,7 @@ function showNotes(){
         noteElm.innerHTML = html;
     }else{
         noteElm.innerHTML = emptymessage;
+        document.getElementById("search").disabled = true;
     }
     searchBar.value = "";
 }
