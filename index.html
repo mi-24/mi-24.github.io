@@ -21,60 +21,9 @@
                     <i class="fa fa-plus-circle" id="add-symbol" aria-hidden="true"></i>
                 </div>
                 <div id="notes" class="row">
-                    <div id="note" class="col-xs-6 col-sm-6 col-lg-4 note">
-                        <div class="nbox">
-                            <h2 class="note-title">Note Title</h2>
-                            <p class="note-text">Note Text</p>
-                            <button class="note-btn" data-toggle="modal" data-target="#editModal" data-backdrop="static" data-keyboard="false" ><i class="fa fa-pencil" aria-hidden="true"></i></button> 
-                            <button class="note-btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                            <p class="date">Last Updated: <br><span>21/07/2021</span></p>
-                        </div>
-                    </div> 
-                    </div>
-                </div>
-                <!-- Modal Edit-->
-                <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title" class="editHeader">Edit Note</h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form class="create-form" action="">
-                                    <br>
-                                    <input type="text" id="" placeholder="Title" required maxlength="50" value=""><br><br><br>
-                                    <textarea name="noteBody" id="" placeholder="Details (maximum 500 characters)" maxlength="500" rows="6" required>${element.text}</textarea>
-                                    <script>
-                                        jQuery(document).ready(function($) {
-                                        var max = 500;
-                                        $('textarea.max').keypress(function(e) {
-                                            // e.which < 0x20, then it's not a printable character
-                                            // e.which === 0 - Not a character
-                                            if (e.which < 0x20) {
-                                                return;
-                                            }
-                                            if (this.value.length == max) {
-                                                e.preventDefault();
-                                            } else if (this.value.length > max) {
-                                                // Maximum exceeded
-                                                this.value = this.value.substring(0, max);
-                                            }
-                                        });
-                                    }); //end if ready
-                                    </script>
-                                    <br><hr>
-                                    <button class="update-btn" type="button" onclick="">Update</button><br>
-                                </form>
-                            </div>
-                            
-                        </div>
-                    </div>
+                    
                 </div>
                 
-            </div>
             <br><br>
         
             <!-- Modal -->
