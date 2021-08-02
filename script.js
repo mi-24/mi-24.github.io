@@ -132,7 +132,7 @@ function showNotes(){
     let emptymessage = `<div class="empty">No notes have been made</div>`;
     notesObj.forEach(function(element, index){
         html += `
-        <div id="note" class="col-xs-6 col-sm-6 col-lg-4 note">
+        <div id="note" class="col-xs-6 col-sm-6 col-lg-4 note animated fadeInDown">
             <div class="nbox" id="bg${index}" style="background-color:${element.colour};">
                 <h2 class="note-title">${element.title}</h2>
                 <p class="note-text">${element.text}</p>

@@ -94,7 +94,18 @@ h3{
 .add:hover{
     opacity: 80%;
     cursor: pointer;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
 }
+@-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #574cc2, 0 0 40px #574cc2, 0 0 50px #574cc2, 0 0 60px #574cc2, 0 0 70px #574cc2;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #9e7aff, 0 0 40px #9e7aff, 0 0 50px #9e7aff, 0 0 60px #9e7aff, 0 0 70px #9e7aff, 0 0 80px #9e7aff;
+    }
+  }
 
 *:focus {
     outline: 0 !important;
