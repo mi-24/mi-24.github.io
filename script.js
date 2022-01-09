@@ -22,7 +22,7 @@ searchBar.addEventListener('keyup', async (event) => {
             <div class="nbox" id="bg${index}" style="background-color:${element.colour};">
                 <h2 class="note-title">${element.title}</h2>
                 <p class="note-text">${element.text}</p>
-                <button id="${index}" class="note-btn edit-btn" data-toggle="modal" data-target="#editModal${index}" data-backdrop="static" data-keyboard="false"><i class="fa fa-pencil" aria-hidden="true"></i></button> 
+                <button id="${index}" class="note-btn edit-btn" data-bs-toggle="modal" data-bs-target="#editModal${index}" data-backdrop="static" data-keyboard="false"><i class="fa fa-pencil" aria-hidden="true"></i></button> 
                 <button id="${index}" onclick="deleteNote(this.id)" class="note-btn delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 <p class="date">Last Updated: <br><span>${element.date}</span></p>
             </div> 
@@ -33,8 +33,7 @@ searchBar.addEventListener('keyup', async (event) => {
                     <div class="modal-content">
                         <div class="modal-header">
                             <h3 class="modal-title" class="editHeader">Edit Note</h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                             </button>
                         </div>
                         <div class="modal-body">
@@ -62,7 +61,7 @@ searchBar.addEventListener('keyup', async (event) => {
                                     });
                                 }); //end if ready
                                 </script>
-                                <br><hr>
+                                <br><br>
                                 <button class="update-btn" type="button" onclick="editNote(${index})">Update</button><br>
                             </form>
                         </div>
@@ -136,7 +135,7 @@ function showNotes(){
             <div class="nbox" id="bg${index}" style="background-color:${element.colour};">
                 <h2 class="note-title">${element.title}</h2>
                 <p class="note-text">${element.text}</p>
-                <button id="${index}" class="note-btn edit-btn" data-toggle="modal" data-target="#editModal${index}" data-backdrop="static" data-keyboard="false"><i class="fa fa-pencil" aria-hidden="true"></i></button> 
+                <button id="${index}" class="note-btn edit-btn" data-bs-toggle="modal" data-bs-target="#editModal${index}" data-backdrop="static" data-keyboard="false"><i class="fa fa-pencil" aria-hidden="true"></i></button> 
                 <button id="${index}" onclick="deleteNote(this.id)" class="note-btn delete-btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
                 <p class="date">Last Updated: <br><span>${element.date}</span></p>
             </div> 
@@ -147,8 +146,7 @@ function showNotes(){
                     <div class="modal-content">
                         <div class="modal-header">
                             <h3 class="modal-title" class="editHeader">Edit Note</h3>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                             </button>
                         </div>
                         <div class="modal-body">
@@ -176,7 +174,7 @@ function showNotes(){
                                     });
                                 }); //end if ready
                                 </script>
-                                <br><hr>
+                                <br><br>
                                 <button class="update-btn" type="button" onclick="editNote(${index})">Update</button><br>
                             </form>
                         </div>
