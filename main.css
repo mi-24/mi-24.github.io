@@ -120,14 +120,13 @@ h3{
     color: rgb(245, 245, 245);
     border-radius: 1000px;
     position: fixed;
-    bottom:25px;
-    right: 10px;
+    bottom: 30px;
+    right: 20px;
     z-index: 1000;
 }
 #add-symbol{
-    font-size: 4rem;
+    font-size: 3rem;
     border-radius: 1000px;
-    background-color: black;
 }
 .add:hover{
     opacity: 90%;
@@ -136,6 +135,7 @@ h3{
 #add-symbol:hover{
     animation: glow 2s ease-in-out infinite alternate;
 }
+/*
 @keyframes glow {
     0% { box-shadow: 0 0 20px #8d71da; }
     100% { box-shadow: 0 0 45px #8d71da; }
@@ -148,6 +148,7 @@ h3{
       text-shadow: 0 0 20px #fff, 0 0 30px #9e7aff, 0 0 40px #9e7aff, 0 0 50px #9e7aff, 0 0 60px #9e7aff, 0 0 70px #9e7aff, 0 0 80px #9e7aff;
     }
   }
+*/
 
 *:focus {
     outline: 0 !important;
