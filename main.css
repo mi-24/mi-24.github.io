@@ -127,7 +127,7 @@ h3{
 #add-symbol{
     font-size: 4rem;
     border-radius: 1000px;
-    background-color: none;
+    background-color: black;
 }
 .add:hover{
     opacity: 90%;
