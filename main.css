@@ -110,7 +110,6 @@ h3{
 .date{
     float:right;
     text-align: right;
-    color:rgba(0, 0, 0, 0.6);
     font-size: 0.7rem;
 }
 .add{
@@ -132,10 +131,11 @@ h3{
     opacity: 90%;
     cursor: pointer;
 }
+/*
 #add-symbol:hover{
     animation: glow 2s ease-in-out infinite alternate;
-}
-/*
+}*/
+
 @keyframes glow {
     0% { box-shadow: 0 0 20px #8d71da; }
     100% { box-shadow: 0 0 45px #8d71da; }
@@ -148,7 +148,6 @@ h3{
       text-shadow: 0 0 20px #fff, 0 0 30px #9e7aff, 0 0 40px #9e7aff, 0 0 50px #9e7aff, 0 0 60px #9e7aff, 0 0 70px #9e7aff, 0 0 80px #9e7aff;
     }
   }
-*/
 
 *:focus {
     outline: 0 !important;
@@ -193,21 +192,23 @@ form input{
     background-color: rgb(89, 55, 133);
     cursor: pointer;
 }
-#noteTitleInput{
+.noteInputTitle{
     font-weight: bold;
 }
-.editTitle{
-    font-weight: bold;
+.noteInput{
+    border:none;
+    background-color: rgba(171, 170, 228, 0.15);
 }
+
+textarea{    
+    border-top: 1px rgba(0, 0, 0, 0.5);
+}
+
 .modal-header{
     background-color: rgb(149, 148, 202);
     color: white;
 }
-/*
-#noteBodyInput{
-    background-color: #f5ceff;
-}
-*/
+
 #blue, #white, #purple{
     width:10px;
     margin:5px;
@@ -215,15 +216,55 @@ form input{
     display:inline;
     cursor: pointer;
 }
-
-.colour{
+.noteStyleContainer{
+    border:none;
+    margin:auto;
+}
+.noteStyle{
     height:50px;
     width: 50px;
     padding:2px;
-    margin: 2px;
+    cursor: pointer;
+    text-align: center;
     border-radius: 100px;
+    vertical-align: top;
+}
+.textColour{
+    margin-left: 10px;
+}
+.textColourLabel{
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    color:black;
+    text-shadow: 1px 1px #fff;
+    position:absolute;
+    right:240px;
+    bottom: 116px;
+    pointer-events: none;
+}
+.star{
+    margin-left: 10px;
+    background-color: #9594ca;
+    color: white;
+}
+.smallStar{
+    float:right;
+    width:40px;
+    height:40px;
+    background-color: #9594ca;
     cursor: pointer;
 }
+.bold{ 
+    margin-left: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+}
+.italics{
+    margin-left: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+}
+
 input[type="color"]:first-child {
     padding: 2px;
     margin: 2px;

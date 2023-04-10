@@ -20,9 +20,10 @@
         <div class="container">
             <h1>My Notes</h1>
             <input type="text" id="search" placeholder=" Search">
+            <button class='border-round star noteStyle' type="button" id="mainStar" name="star" style="float:right;"><i class="fa fa-star"></i></button>
             <div class="notes">
                 <div class="add" id="myBtn" data-bs-toggle="modal" data-bs-target="#addModal" data-backdrop="static" data-keyboard="false">
-                    <i class="fa fa-pencil-square-o" id="add-symbol" aria-hidden="true"></i>
+                    <i class="fa fa-pencil" id="add-symbol" aria-hidden="true"></i>
                 </div>
                 <div id="notes" class="row">
                 </div>
@@ -40,10 +41,19 @@
                         <div class="modal-body">
                             <form class="create-form" action="">
                                 <br>
-                                <input type="text" id="noteTitleInput" placeholder="Title" required maxlength="50"><br><br><br>
-                                <textarea name="noteBody" id="noteBodyInput" placeholder="Details (maximum 500 characters)" maxlength="500" rows="6" required></textarea>
-                                <br><br>
-                                <input class="border-round colour" type="color" id="colour" name="favcolor" value="#cbd4ff">
+                                <input type="text" class="noteInput noteInputTitle" id="noteTitleInput" placeholder="Title" required maxlength="50">
+                                <textarea class="noteInput" name="noteBody" id="noteBodyInput" placeholder="Details (maximum 500 characters)" maxlength="500" rows="10" required></textarea>
+                                <br>
+                                <div class="noteStyleContainer">
+                                    <input class="border-round colour noteStyle" type="color" id="colour" name="favcolor" value="#F1F1FA" data-toggle="tooltip" data-placement="auto" title="Note background colour" onclick="selectColor()">                                                                                                              
+                                    <input class='border-round textColour noteStyle' type="color" id="textColour" name="textColor" value='#5246c2'/>
+                                    <span  class='textColourLabel'>T</span>                 
+                                    <button class='border-round star noteStyle' type="button" id="star" name="star"><i class="fa fa-star"></i></button>
+                                    <!--
+                                    <input class='border-round bold noteStyle' type='button' value='B' readonly/>
+                                    <input class='border-round italics noteStyle' type='button' value='I' readonly/>
+                                    -->                 
+                                </div>
                                 <script>
                                     jQuery(document).ready(function($) {
                                     var max = 500;
@@ -62,7 +72,6 @@
                                     });
                                 }); //end if ready
                                 </script>
-                                <br><br>
                                 <button id="add-btn" type="submit">Add</button><br>
                             </form>
                         </div>
